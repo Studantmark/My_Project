@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>infoPage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">InfoPage</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <h2>Welcome {{ name }}</h2><!-- using data binding to access the storage from earlier and output the users name-->
+    <h1>Please select what format you want</h1>
+    <h3>
+    <ion-button (click)="openBlank()">Blank page</ion-button>
+    <ion-button (click)="openContact()">Contact page</ion-button>
+    <ion-button (click)="openLocation()">GPS</ion-button>
+    <ion-button (click)="openEvents()">Events</ion-button>
+    </h3>
+    <ion-button (click)="openHome()">Back</ion-button>
+  </div>
+</ion-content>

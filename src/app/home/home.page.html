@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Notes app
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,6 +14,20 @@
   </ion-header>
 
   <div id="container">
- <h3>Welcome to Mobile Apps Starter project 2023</h3>
+ <h3><ion-input type="text" [(ngModel)]="myUser" placeholder="Enter name"></ion-input><!-- using data binding to pass the name to the backend-->
+      <ion-button (click)="saveUser()" >Submit</ion-button>
+
+  </h3>
+    
+    <h2 [hidden]="hidden">
+      <p>Thank you for entering your name!<p>
+      <br>
+      <p>To continue press the button</p>
+      <br>
+      <ion-button (click)="openInfo()">Next page</ion-button>
+      </h2>
   </div>
+  
+  
+  
 </ion-content>

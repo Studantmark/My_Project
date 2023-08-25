@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>contactPage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Contact Page</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  
+    <div id="container">
+      <ion-textarea [autoGrow]="true" placeholder="Enter Name,Phone number,Address and E-mail" [(ngModel)]="contactNote" value="{{connote}}"></ion-textarea> 
+      <!--The text area has a placeholder format, it also fills up with anything the user had perviously enter-->
+    </div>
+    <div id="button">
+      
+      <p>
+      <ion-button (click)="saveNote()">Save</ion-button>
+      <ion-button (click)="back()">Back</ion-button>
+      </p>
+    </div>
+  
+</ion-content>

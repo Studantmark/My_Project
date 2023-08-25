@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Galway Events</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Events</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h2>Events in Galway
+    <ol>
+      <li *ngFor="let e of events"><p>{{e.name}},{{e.date}}</p></li> <!--Using an ordered list and *ngFor to grab the json data and output it-->
+    </ol>
+  </h2>
+  <div id="container">
+    <ion-button (click)="back()">Back</ion-button>
+
+  </div>
+</ion-content>
